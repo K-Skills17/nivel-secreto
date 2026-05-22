@@ -10,9 +10,9 @@ export function FeaturedProducts() {
 
   return (
     <section className="py-28 lg:py-36 px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
@@ -32,8 +32,8 @@ export function FeaturedProducts() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl lg:text-6xl text-cream mt-5"
+            transition={{ delay: 0.15 }}
+            className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl text-cream mt-5"
           >
             Mais Procurados
           </motion.h2>
@@ -41,41 +41,44 @@ export function FeaturedProducts() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="text-cream-muted/50 mt-5 max-w-md mx-auto text-sm leading-[1.8]"
+            transition={{ delay: 0.25 }}
+            className="text-cream-muted/40 mt-5 max-w-md mx-auto text-sm leading-[1.8]"
           >
             Os favoritos de quem prioriza qualidade e experiência.
           </motion.p>
         </div>
 
-        {/* Products grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Products grid — 2 cols on tablet, 4 on desktop with proper gap */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-6">
           {products.map((product, i) => (
             <motion.div
               key={product.id}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: i * 0.12, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ delay: i * 0.15, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
               <ProductCard product={product} />
             </motion.div>
           ))}
         </div>
 
-        {/* View all */}
+        {/* View all link */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="text-center mt-16"
+          transition={{ delay: 0.6 }}
+          className="text-center mt-14"
         >
           <Link
             href="/categoria/vibradores"
-            className="inline-flex items-center gap-2 text-cream-muted/50 text-[11px] tracking-[0.2em] uppercase hover:text-gold transition-colors duration-500 border-b border-cream-muted/20 hover:border-gold/40 pb-1"
+            className="inline-flex items-center gap-3 text-cream-muted/40 text-[11px] tracking-[0.2em] uppercase hover:text-gold transition-colors duration-500 group"
           >
-            Ver Todos os Produtos
+            <span className="border-b border-cream-muted/15 group-hover:border-gold/40 pb-1 transition-colors duration-500">
+              Ver Toda a Coleção
+            </span>
+            <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
           </Link>
         </motion.div>
       </div>

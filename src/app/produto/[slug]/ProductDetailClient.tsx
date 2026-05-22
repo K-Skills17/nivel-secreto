@@ -38,8 +38,8 @@ export function ProductDetailClient({ product }: { product: Product }) {
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="aspect-square rounded-lg border border-surface-border overflow-hidden"
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="aspect-square rounded border border-surface-border/50 overflow-hidden bg-[#1a1820]"
         >
           <ProductImage src={product.images[0]} productName={product.name} size="lg" />
         </motion.div>
@@ -48,7 +48,7 @@ export function ProductDetailClient({ product }: { product: Product }) {
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         >
           {/* Category & Badge */}
           <div className="flex items-center gap-3 mb-4">
