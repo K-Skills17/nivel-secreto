@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ShoppingBag, Eye } from "lucide-react";
 import { Product, useCartStore } from "@/lib/store";
+import { ProductImage } from "@/components/product/ProductImage";
 import { formatPrice } from "@/lib/utils";
 
 export function ProductCard({ product }: { product: Product }) {
@@ -13,10 +14,7 @@ export function ProductCard({ product }: { product: Product }) {
     <div className="group relative bg-surface-light rounded-lg overflow-hidden border border-surface-border hover:border-gold/20 transition-all duration-500">
       {/* Image area */}
       <Link href={`/produto/${product.slug}`} className="block relative aspect-square bg-surface overflow-hidden">
-        {/* Placeholder */}
-        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-surface to-surface-light">
-          <ShoppingBag size={40} strokeWidth={1} className="text-cream-muted/10" />
-        </div>
+        <ProductImage categorySlug={product.categorySlug} productName={product.name} size="md" />
 
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

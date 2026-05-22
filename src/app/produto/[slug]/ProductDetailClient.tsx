@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ShoppingBag, ArrowLeft, Shield, Truck, Lock } from "lucide-react";
+import { ProductImage } from "@/components/product/ProductImage";
 import Link from "next/link";
 import { Product, useCartStore } from "@/lib/store";
 import { formatPrice } from "@/lib/utils";
@@ -38,12 +39,9 @@ export function ProductDetailClient({ product }: { product: Product }) {
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="aspect-square bg-surface rounded-lg border border-surface-border flex items-center justify-center overflow-hidden"
+          className="aspect-square rounded-lg border border-surface-border overflow-hidden"
         >
-          <div className="text-center">
-            <ShoppingBag size={80} strokeWidth={0.5} className="text-cream-muted/10 mx-auto" />
-            <p className="text-cream-muted/20 text-sm mt-4">Imagem do Produto</p>
-          </div>
+          <ProductImage categorySlug={product.categorySlug} productName={product.name} size="lg" />
         </motion.div>
 
         {/* Details */}

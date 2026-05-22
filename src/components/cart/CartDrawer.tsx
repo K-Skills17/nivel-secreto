@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Minus, Plus, ShoppingBag } from "lucide-react";
 import { useCartStore } from "@/lib/store";
+import { ProductImage } from "@/components/product/ProductImage";
 import { formatPrice } from "@/lib/utils";
 import Link from "next/link";
 
@@ -62,9 +63,8 @@ export function CartDrawer() {
                       exit={{ opacity: 0, x: 50 }}
                       className="flex gap-4 p-4 bg-surface-light rounded-lg border border-surface-border"
                     >
-                      {/* Placeholder image */}
-                      <div className="w-20 h-20 bg-surface-border rounded-md flex items-center justify-center flex-shrink-0">
-                        <ShoppingBag size={20} className="text-cream-muted/30" />
+                      <div className="w-20 h-20 rounded-md overflow-hidden flex-shrink-0">
+                        <ProductImage categorySlug={item.product.categorySlug} productName={item.product.name} size="sm" />
                       </div>
 
                       <div className="flex-1 min-w-0">

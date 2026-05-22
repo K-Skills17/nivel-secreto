@@ -6,10 +6,19 @@ export function generateStaticParams() {
   return categories.map((c) => ({ slug: c.slug }));
 }
 
-export function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  // We need to handle this synchronously for static generation
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const category = categories.find((c) => c.slug === slug);
+  if (!category) return { title: "Categoria não encontrada" };
+
   return {
-    title: "Nível Secreto | Categoria",
+    title: category.name,
+    description: category.description,
+    openGraph: {
+      title: `${category.name} | Nível Secreto`,
+      description: category.description,
+      url: `https://nivelsecreto.com.br/categoria/${slug}`,
+    },
   };
 }
 

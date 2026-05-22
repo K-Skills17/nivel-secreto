@@ -4,6 +4,8 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CartDrawer } from "@/components/cart/CartDrawer";
+import { AgeGate } from "@/components/AgeGate";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -20,9 +22,42 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Nível Secreto | Seu Prazer em Outro Nível",
+  metadataBase: new URL("https://nivelsecreto.com.br"),
+  title: {
+    default: "Nível Secreto | Seu Prazer em Outro Nível",
+    template: "%s | Nível Secreto",
+  },
   description:
-    "Loja premium de produtos adultos. Vibradores, acessórios e mais com entrega discreta em todo Brasil.",
+    "Loja premium de produtos adultos. Vibradores, masturbadores, acessórios e mais com entrega 100% discreta em todo Brasil. Pagamento seguro.",
+  keywords: [
+    "sex shop online",
+    "produtos adultos",
+    "vibrador",
+    "sex shop brasil",
+    "loja adulta",
+    "produtos eróticos",
+    "entrega discreta",
+    "sex shop premium",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://nivelsecreto.com.br",
+    siteName: "Nível Secreto",
+    title: "Nível Secreto | Seu Prazer em Outro Nível",
+    description:
+      "Loja premium de produtos adultos com entrega 100% discreta em todo Brasil.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nível Secreto | Seu Prazer em Outro Nível",
+    description:
+      "Loja premium de produtos adultos com entrega 100% discreta em todo Brasil.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -33,10 +68,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${cormorant.variable} ${inter.variable}`}>
       <body className="bg-background text-cream antialiased">
+        <AgeGate />
         <Navbar />
         <main>{children}</main>
         <Footer />
         <CartDrawer />
+        <WhatsAppButton />
       </body>
     </html>
   );
