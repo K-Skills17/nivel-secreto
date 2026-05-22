@@ -13,7 +13,7 @@ export function ProductCard({ product }: { product: Product }) {
     <div className="group bg-background">
       {/* Image */}
       <Link href={`/produto/${product.slug}`} className="block relative aspect-[4/5] overflow-hidden">
-        <ProductImage categorySlug={product.categorySlug} productName={product.name} size="md" />
+        <ProductImage src={product.images[0]} productName={product.name} size="md" />
 
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-gold/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />

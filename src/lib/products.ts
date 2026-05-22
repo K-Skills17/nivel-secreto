@@ -1,12 +1,12 @@
 import { Product } from "./store";
 
 export const categories = [
-  { name: "Vibradores", slug: "vibradores", description: "Tecnologia e design a serviço do prazer feminino e compartilhado." },
-  { name: "Masturbadores", slug: "masturbadores", description: "Engenharia de precisão para o prazer masculino." },
-  { name: "Plug Anal", slug: "plug-anal", description: "Exploração gradual com conforto e materiais de excelência." },
-  { name: "Fetiche & Sado", slug: "fetiche-e-sado", description: "Confiança, poder e entrega em materiais premium." },
-  { name: "Acessórios", slug: "acessorios", description: "Complementos essenciais para elevar cada momento." },
-  { name: "Próteses", slug: "proteses", description: "Realismo e qualidade em silicone médico certificado." },
+  { name: "Vibradores", slug: "vibradores", description: "Tecnologia e design a serviço do prazer feminino e compartilhado.", image: "https://nivelsecreto.com.br/wp-content/uploads/elementor/thumbs/ifonnx-toys-Id_jzYP7h6s-unsplash-scaled-r5rmkehsv1eqy6wnec8j0w2z09hdgxkae4opo2lnpg.jpg" },
+  { name: "Masturbadores", slug: "masturbadores", description: "Engenharia de precisão para o prazer masculino.", image: "https://nivelsecreto.com.br/wp-content/uploads/elementor/thumbs/lovense-toys-BttrI8hxmi8-unsplash-scaled-r5rmghi0dw1qkolg9nahmvntwgsbec0juqtvokepms.jpg" },
+  { name: "Plug Anal", slug: "plug-anal", description: "Exploração gradual com conforto e materiais de excelência.", image: "https://nivelsecreto.com.br/wp-content/uploads/elementor/thumbs/gwen-mamanoleas-ZwKAJ0zmk6Y-unsplash-scaled-r5rluv7n72gbjjzyiaveac261fcecy6svqnubggoqs.jpg" },
+  { name: "Fetiche & Sado", slug: "fetiche-e-sado", description: "Confiança, poder e entrega em materiais premium.", image: "https://nivelsecreto.com.br/wp-content/uploads/elementor/thumbs/pexels-31299941-8587249-r5rlpa26kisyj0454vx8gqtiwyvulq08s31xm8qxqc.jpg" },
+  { name: "Acessórios", slug: "acessorios", description: "Complementos essenciais para elevar cada momento.", image: "https://nivelsecreto.com.br/wp-content/uploads/elementor/thumbs/andrey-matveev-WydWcF2EPjc-unsplash-scaled-r5rls7c3tyt2nbv825fg8095g4gyjtm6ik4bd8eudg.jpg" },
+  { name: "Próteses", slug: "proteses", description: "Realismo e qualidade em silicone médico certificado.", image: "https://nivelsecreto.com.br/wp-content/uploads/elementor/thumbs/gwen-mamanoleas-N2ZsTxVBIN4-unsplash-1-scaled-r5rlkrg3q6mcqgocifmrzdus5b5cm32ohq6xldg1ms.jpg" },
 ];
 
 export const products: Product[] = [
@@ -17,7 +17,7 @@ export const products: Product[] = [
     description: "Motor duplo para estimulação simultânea interna e externa. Material flexível body-safe, design ergonômico. 15cm de comprimento útil.",
     price: 64.99,
     originalPrice: 79.99,
-    images: ["/products/vibrador-1.jpg"],
+    images: ["https://nivelsecreto.com.br/wp-content/uploads/2025/05/20859-4-300x300.jpg"],
     category: "Vibradores",
     categorySlug: "vibradores",
     badge: "Promoção",
@@ -30,7 +30,7 @@ export const products: Product[] = [
     description: "Massageador de alta potência com 10 padrões de vibração. Recarregável via USB, silicone hipoalergênico premium. 36cm.",
     price: 109.90,
     originalPrice: 129.99,
-    images: ["/products/varinha-1.jpg"],
+    images: ["https://nivelsecreto.com.br/wp-content/uploads/2025/05/3018-4-300x300.jpg"],
     category: "Vibradores",
     categorySlug: "vibradores",
     badge: "Destaque",
@@ -43,7 +43,7 @@ export const products: Product[] = [
     description: "Design compacto e discreto com motor de vibração multivelocidade. Material cyberskin de toque ultra realista.",
     price: 109.99,
     originalPrice: 149.50,
-    images: ["/products/masturbador-1.jpg"],
+    images: ["https://nivelsecreto.com.br/wp-content/uploads/2025/05/17724-4-300x300.jpg"],
     category: "Masturbadores",
     categorySlug: "masturbadores",
     badge: "Promoção",
@@ -56,7 +56,7 @@ export const products: Product[] = [
     description: "Controle via aplicativo a qualquer distância. Bluetooth, à prova d'água, silicone médico certificado. Projetado para uso a dois.",
     price: 399.80,
     originalPrice: 450.00,
-    images: ["/products/vibrador-casal-1.jpg"],
+    images: ["https://nivelsecreto.com.br/wp-content/uploads/2025/05/18877-4-300x300.jpg"],
     category: "Vibradores",
     categorySlug: "vibradores",
     badge: "Premium",

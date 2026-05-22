@@ -41,7 +41,7 @@ export function ProductDetailClient({ product }: { product: Product }) {
           transition={{ duration: 0.6 }}
           className="aspect-square rounded-lg border border-surface-border overflow-hidden"
         >
-          <ProductImage categorySlug={product.categorySlug} productName={product.name} size="lg" />
+          <ProductImage src={product.images[0]} productName={product.name} size="lg" />
         </motion.div>
 
         {/* Details */}

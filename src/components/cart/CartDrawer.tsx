@@ -64,7 +64,7 @@ export function CartDrawer() {
                       className="flex gap-4 p-4 bg-surface-light rounded-lg border border-surface-border"
                     >
                       <div className="w-20 h-20 rounded-md overflow-hidden flex-shrink-0">
-                        <ProductImage categorySlug={item.product.categorySlug} productName={item.product.name} size="sm" />
+                        <ProductImage src={item.product.images[0]} productName={item.product.name} size="sm" />
                       </div>
 
                       <div className="flex-1 min-w-0">
