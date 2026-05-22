@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/layout/Navbar";
+import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { CartDrawer } from "@/components/cart/CartDrawer";
-import { AgeGate } from "@/components/AgeGate";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
+import { AgeGate } from "@/components/layout/AgeGate";
+import { CartDrawer } from "@/components/commerce/CartDrawer";
+import { WhatsAppFab } from "@/components/layout/WhatsAppFab";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -17,63 +18,41 @@ const cormorant = Cormorant_Garamond({
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
-  variable: "--font-body",
+  variable: "--font-sans",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nivelsecreto.com.br"),
   title: {
-    default: "Nível Secreto | Seu Prazer em Outro Nível",
+    default: "Nível Secreto | Intimidade com Sofisticação",
     template: "%s | Nível Secreto",
   },
   description:
-    "Loja premium de produtos adultos. Vibradores, masturbadores, acessórios e mais com entrega 100% discreta em todo Brasil. Pagamento seguro.",
-  keywords: [
-    "sex shop online",
-    "produtos adultos",
-    "vibrador",
-    "sex shop brasil",
-    "loja adulta",
-    "produtos eróticos",
-    "entrega discreta",
-    "sex shop premium",
-  ],
+    "Produtos íntimos premium para casais. Entrega 100% discreta, pagamento seguro e atendimento sigiloso. Redescubra a intimidade.",
+  keywords: ["produtos íntimos", "casais", "intimidade", "loja íntima", "entrega discreta", "bem-estar íntimo"],
   openGraph: {
     type: "website",
     locale: "pt_BR",
     url: "https://nivelsecreto.com.br",
     siteName: "Nível Secreto",
-    title: "Nível Secreto | Seu Prazer em Outro Nível",
-    description:
-      "Loja premium de produtos adultos com entrega 100% discreta em todo Brasil.",
+    title: "Nível Secreto | Intimidade com Sofisticação",
+    description: "Produtos íntimos premium para casais. Entrega 100% discreta.",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Nível Secreto | Seu Prazer em Outro Nível",
-    description:
-      "Loja premium de produtos adultos com entrega 100% discreta em todo Brasil.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className={`${cormorant.variable} ${inter.variable}`}>
-      <body className="bg-background text-cream antialiased">
+      <body>
         <AgeGate />
-        <Navbar />
-        <main>{children}</main>
+        <AnnouncementBar />
+        <Header />
+        <main className="min-h-screen">{children}</main>
         <Footer />
         <CartDrawer />
-        <WhatsAppButton />
+        <WhatsAppFab />
       </body>
     </html>
   );

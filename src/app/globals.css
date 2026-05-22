@@ -1,55 +1,68 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-@theme {
-  --color-background: #141218;
-  --color-surface: #1b1920;
-  --color-surface-light: #231f28;
-  --color-surface-border: #322e38;
-  --color-gold: #c9a96e;
-  --color-gold-light: #d9be88;
-  --color-gold-dark: #b08f55;
-  --color-cream: #f2efe9;
-  --color-cream-muted: #968f85;
-  --color-danger: #c0392b;
+@custom-variant dark (&:is(.dark *));
 
+@theme inline {
   --font-heading: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --color-ink: #1A1418;
+  --color-wine: #5B1F2E;
+  --color-plum: #6E3A55;
+  --color-champagne: #C9A86A;
+  --color-rose: #C98B8B;
+  --color-cream: #F6F1EA;
+  --color-mist: #EDE6DD;
+  --color-muted: #8A7F78;
+
+  --color-background: var(--cream);
+  --color-foreground: var(--ink);
+  --color-card: var(--cream);
+  --color-card-foreground: var(--ink);
+  --color-primary: var(--champagne);
+  --color-primary-foreground: var(--ink);
+  --color-secondary: var(--mist);
+  --color-secondary-foreground: var(--ink);
+  --color-muted-foreground: var(--muted);
+  --color-accent: var(--wine);
+  --color-accent-foreground: var(--cream);
+  --color-destructive: #c0392b;
+  --color-border: #DDD5CA;
+  --color-input: #DDD5CA;
+  --color-ring: var(--champagne);
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.625rem;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-body);
-  background-color: var(--color-background);
-  color: var(--color-cream);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-cream text-ink antialiased;
+    font-family: var(--font-sans);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 ::selection {
-  background-color: var(--color-gold);
-  color: var(--color-background);
+  background-color: var(--color-champagne);
+  color: var(--color-ink);
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-}
-::-webkit-scrollbar-track {
-  background: var(--color-background);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-gold-dark);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gold);
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--color-cream); }
+::-webkit-scrollbar-thumb { background: var(--color-muted); border-radius: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

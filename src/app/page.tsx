@@ -1,17 +1,23 @@
-import { Hero } from "@/components/home/Hero";
-import { Categories } from "@/components/home/Categories";
-import { FeaturedProducts } from "@/components/home/FeaturedProducts";
-import { ValueProps } from "@/components/home/ValueProps";
-import { Newsletter } from "@/components/home/Newsletter";
+import { Hero } from "@/components/sections/Hero";
+import { TrustBand } from "@/components/sections/TrustBand";
+import { CollectionsGrid } from "@/components/sections/CollectionsGrid";
+import { BundleFeature } from "@/components/sections/BundleFeature";
+import { FeaturedProducts } from "@/components/sections/FeaturedProducts";
+import { Reviews } from "@/components/sections/Reviews";
+import { Reassurance } from "@/components/sections/Reassurance";
+import { EmailCapture } from "@/components/sections/EmailCapture";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Categories />
+      <TrustBand />
+      <CollectionsGrid />
+      <BundleFeature />
       <FeaturedProducts />
-      <ValueProps />
-      <Newsletter />
+      <Reviews />
+      <Reassurance />
+      <EmailCapture />
     </>
   );
 }
