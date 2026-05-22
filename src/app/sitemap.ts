@@ -1,31 +1,15 @@
 import type { MetadataRoute } from "next";
-import { collections as categories, products } from "@/data/products";
+import { collections, products } from "@/data/products";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://nivelsecreto.com.br";
-
-  const categoryUrls = categories.map((cat) => ({
-    url: `${baseUrl}/categoria/${cat.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 0.8,
-  }));
-
-  const productUrls = products.map((product) => ({
-    url: `${baseUrl}/produto/${product.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 0.6,
-  }));
-
+  const base = "https://nivelsecreto.com.br";
   return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1,
-    },
-    ...categoryUrls,
-    ...productUrls,
+    { url: base, lastModified: new Date(), changeFrequency: "daily", priority: 1 },
+    { url: `${base}/colecoes`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    ...collections.map((c) => ({ url: `${base}/colecoes/${c.slug}`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.8 })),
+    ...products.map((p) => ({ url: `${base}/produto/${p.slug}`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.7 })),
+    { url: `${base}/sobre`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/faq`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/contato`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
   ];
 }
