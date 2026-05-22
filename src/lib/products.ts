@@ -1,0 +1,181 @@
+import { Product } from "./store";
+
+export const categories = [
+  { name: "Vibradores", slug: "vibradores", description: "Descubra novas sensações com nossa coleção premium de vibradores." },
+  { name: "Masturbadores", slug: "masturbadores", description: "Prazer masculino elevado ao próximo nível." },
+  { name: "Plug Anal", slug: "plug-anal", description: "Explore territórios inexplorados com conforto e segurança." },
+  { name: "Fetiche & Sado", slug: "fetiche-e-sado", description: "Para quem busca intensidade e poder em suas experiências." },
+  { name: "Acessórios", slug: "acessorios", description: "Complementos essenciais para suas aventuras." },
+  { name: "Próteses", slug: "proteses", description: "Realismo e qualidade em cada detalhe." },
+];
+
+export const products: Product[] = [
+  {
+    id: "1",
+    name: "Vibrador Jelly Duplo Motor 15cm",
+    slug: "vibrador-jelly-duplo-motor-15cm",
+    description: "Vibrador com motor duplo para estimulação simultânea. Design ergonômico em material jelly macio e flexível, com 15cm de comprimento para máximo prazer.",
+    price: 64.99,
+    originalPrice: 79.99,
+    images: ["/products/vibrador-1.jpg"],
+    category: "Vibradores",
+    categorySlug: "vibradores",
+    badge: "Promoção",
+    inStock: true,
+  },
+  {
+    id: "2",
+    name: "Varinha Mágica 36cm Recarregável 10V",
+    slug: "varinha-magica-36cm-recarregavel",
+    description: "Varinha massageadora potente com 10 velocidades de vibração. Recarregável via USB, com 36cm de comprimento. Silicone premium hipoalergênico.",
+    price: 109.90,
+    originalPrice: 129.99,
+    images: ["/products/varinha-1.jpg"],
+    category: "Vibradores",
+    categorySlug: "vibradores",
+    badge: "Mais Vendido",
+    inStock: true,
+  },
+  {
+    id: "3",
+    name: "Vagina Lanterna com Vibração",
+    slug: "vagina-lanterna-vibracao",
+    description: "Masturbador discreto em formato lanterna com motor de vibração multivelocidade. Material cyberskin ultra realista.",
+    price: 109.99,
+    originalPrice: 149.50,
+    images: ["/products/masturbador-1.jpg"],
+    category: "Masturbadores",
+    categorySlug: "masturbadores",
+    badge: "Promoção",
+    inStock: true,
+  },
+  {
+    id: "4",
+    name: "Vibrador de Casal Longa Distância",
+    slug: "vibrador-casal-longa-distancia",
+    description: "Controle via aplicativo de qualquer lugar do mundo. Vibrador para casais com tecnologia Bluetooth, à prova d'água, silicone médico.",
+    price: 399.80,
+    originalPrice: 450.00,
+    images: ["/products/vibrador-casal-1.jpg"],
+    category: "Vibradores",
+    categorySlug: "vibradores",
+    badge: "Premium",
+    inStock: true,
+  },
+  {
+    id: "5",
+    name: "Plug Anal Silicone Premium Kit 3 Peças",
+    slug: "plug-anal-silicone-kit-3",
+    description: "Kit com 3 tamanhos progressivos em silicone médico. Base de segurança alargada, superfície ultra suave.",
+    price: 89.90,
+    originalPrice: 119.90,
+    images: ["/products/plug-1.jpg"],
+    category: "Plug Anal",
+    categorySlug: "plug-anal",
+    badge: "Kit",
+    inStock: true,
+  },
+  {
+    id: "6",
+    name: "Kit Bondage Luxo 7 Peças",
+    slug: "kit-bondage-luxo-7-pecas",
+    description: "Conjunto completo em couro sintético premium: algemas, venda, mordaça, coleira, chibata, cordas e dado erótico.",
+    price: 199.90,
+    originalPrice: 259.90,
+    images: ["/products/fetiche-1.jpg"],
+    category: "Fetiche & Sado",
+    categorySlug: "fetiche-e-sado",
+    badge: "Kit Completo",
+    inStock: true,
+  },
+  {
+    id: "7",
+    name: "Óleo de Massagem Sensual Aquecedor",
+    slug: "oleo-massagem-sensual",
+    description: "Óleo com efeito aquecedor para massagens sensuais. Fragrância envolvente, textura sedosa, não mancha.",
+    price: 39.90,
+    images: ["/products/acessorio-1.jpg"],
+    category: "Acessórios",
+    categorySlug: "acessorios",
+    inStock: true,
+  },
+  {
+    id: "8",
+    name: "Prótese Realística 18cm com Ventosa",
+    slug: "protese-realistica-18cm-ventosa",
+    description: "Prótese hiper-realística com veias e texturas detalhadas. Ventosa de fixação potente, silicone premium flexível.",
+    price: 129.90,
+    originalPrice: 159.90,
+    images: ["/products/protese-1.jpg"],
+    category: "Próteses",
+    categorySlug: "proteses",
+    badge: "Realístico",
+    inStock: true,
+  },
+  {
+    id: "9",
+    name: "Anel Peniano Vibratório Recarregável",
+    slug: "anel-peniano-vibratorio",
+    description: "Anel vibratório em silicone elástico com 10 modos de vibração. Estimulação para ambos os parceiros, recarregável via USB.",
+    price: 79.90,
+    originalPrice: 99.90,
+    images: ["/products/acessorio-2.jpg"],
+    category: "Acessórios",
+    categorySlug: "acessorios",
+    badge: "Para Casais",
+    inStock: true,
+  },
+  {
+    id: "10",
+    name: "Sugador de Clitóris 7 Intensidades",
+    slug: "sugador-clitoris-7-intensidades",
+    description: "Tecnologia de ondas de pressão com 7 intensidades. Silicone ultra macio, à prova d'água, USB recarregável. O queridinho das redes sociais.",
+    price: 189.90,
+    originalPrice: 239.90,
+    images: ["/products/vibrador-2.jpg"],
+    category: "Vibradores",
+    categorySlug: "vibradores",
+    badge: "Tendência",
+    inStock: true,
+  },
+  {
+    id: "11",
+    name: "Masturbador Automático Rotativo",
+    slug: "masturbador-automatico-rotativo",
+    description: "Masturbador elétrico com movimentos rotativos e de sucção automáticos. 7 modos, recarregável, material TPE premium.",
+    price: 299.90,
+    originalPrice: 379.90,
+    images: ["/products/masturbador-2.jpg"],
+    category: "Masturbadores",
+    categorySlug: "masturbadores",
+    badge: "High-Tech",
+    inStock: true,
+  },
+  {
+    id: "12",
+    name: "Chicote de Couro Artesanal",
+    slug: "chicote-couro-artesanal",
+    description: "Chicote artesanal em couro legítimo com cabo ergonômico. Tiras macias para intensidades variadas.",
+    price: 89.90,
+    images: ["/products/fetiche-2.jpg"],
+    category: "Fetiche & Sado",
+    categorySlug: "fetiche-e-sado",
+    inStock: true,
+  },
+];
+
+export function getProductsByCategory(categorySlug: string): Product[] {
+  return products.filter((p) => p.categorySlug === categorySlug);
+}
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug);
+}
+
+export function getFeaturedProducts(): Product[] {
+  return products.filter((p) => p.badge);
+}
+
+export function getBestSellers(): Product[] {
+  return products.slice(0, 4);
+}
