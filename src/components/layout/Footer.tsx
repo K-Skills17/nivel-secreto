@@ -12,7 +12,7 @@ export function Footer() {
               NÍVEL SECRETO
             </h2>
             <p className="text-cream-muted text-sm leading-relaxed">
-              Seu prazer em outro nível. Produtos premium com entrega 100% discreta em todo Brasil.
+              Produtos selecionados para casais que valorizam qualidade e discrição. Entrega discreta em todo Brasil.
             </p>
           </div>
 
@@ -61,9 +61,9 @@ export function Footer() {
             </h3>
             <ul className="space-y-3 text-cream-muted text-sm">
               <li>contato@nivelsecreto.com.br</li>
-              <li>Atendimento: Seg-Sex 9h-18h</li>
+              <li>Seg a Sex, 9h às 18h</li>
               <li className="pt-2 text-xs text-cream-muted/60">
-                Embalagem 100% discreta. Sua privacidade é nossa prioridade.
+                Embalagem neutra. Sua privacidade é inegociável.
               </li>
             </ul>
           </div>

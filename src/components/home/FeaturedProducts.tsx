@@ -18,7 +18,7 @@ export function FeaturedProducts() {
             viewport={{ once: true }}
             className="text-gold text-xs tracking-[0.3em] uppercase"
           >
-            Destaques
+            Seleção Curada
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -27,28 +27,29 @@ export function FeaturedProducts() {
             transition={{ delay: 0.1 }}
             className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl text-cream mt-4"
           >
-            Mais Vendidos
+            Mais Procurados
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-cream-muted mt-4 max-w-xl mx-auto"
+            className="text-cream-muted/50 mt-4 max-w-md mx-auto text-sm leading-relaxed"
           >
-            Os produtos favoritos dos nossos clientes, selecionados especialmente para você.
+            Os favoritos de quem prioriza qualidade e experiência.
           </motion.p>
         </div>
 
         {/* Products grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-surface-border">
           {products.map((product, i) => (
             <motion.div
               key={product.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="bg-surface"
             >
               <ProductCard product={product} />
             </motion.div>

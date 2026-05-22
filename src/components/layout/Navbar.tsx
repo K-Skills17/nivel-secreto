@@ -34,7 +34,7 @@ export function Navbar() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="group">
-              <h1 className="font-[family-name:var(--font-heading)] text-2xl md:text-3xl font-semibold tracking-wider text-cream group-hover:text-gold transition-colors duration-300">
+              <h1 className="font-[family-name:var(--font-heading)] text-xl md:text-2xl font-semibold tracking-wider text-cream group-hover:text-gold transition-colors duration-300">
                 NÍVEL SECRETO
               </h1>
             </Link>
@@ -45,7 +45,7 @@ export function Navbar() {
                 <Link
                   key={cat.slug}
                   href={`/categoria/${cat.slug}`}
-                  className="text-sm tracking-widest uppercase text-cream-muted hover:text-gold transition-colors duration-300 relative group"
+                  className="text-[11px] tracking-[0.2em] uppercase text-cream-muted hover:text-gold transition-colors duration-300 relative group"
                 >
                   {cat.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full" />
@@ -103,7 +103,7 @@ export function Navbar() {
                   <Link
                     href={`/categoria/${cat.slug}`}
                     onClick={() => setMobileOpen(false)}
-                    className="font-[family-name:var(--font-heading)] text-3xl text-cream hover:text-gold transition-colors"
+                    className="font-[family-name:var(--font-heading)] text-2xl text-cream hover:text-gold transition-colors"
                   >
                     {cat.name}
                   </Link>

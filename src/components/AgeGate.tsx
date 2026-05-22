@@ -57,11 +57,10 @@ export function AgeGate() {
 
             {/* Message */}
             <p className="text-[#f5f0eb] text-lg mb-2 font-[family-name:var(--font-heading)]">
-              Verificação de Idade
+              Confirmação de Idade
             </p>
             <p className="text-[#a89f95] text-sm leading-relaxed mb-10">
-              Este site contém conteúdo destinado exclusivamente para maiores de 18 anos.
-              Ao continuar, você confirma ter idade legal para acessar este conteúdo.
+              Este site é destinado exclusivamente a maiores de 18 anos. Ao prosseguir, você confirma ter idade legal para acessar este conteúdo.
             </p>
 
             {/* Buttons */}
@@ -70,19 +69,19 @@ export function AgeGate() {
                 onClick={handleConfirm}
                 className="w-full sm:w-auto px-10 py-3.5 bg-[#c9a96e] text-[#0a0a0a] text-sm font-semibold tracking-[0.15em] uppercase rounded hover:bg-[#d4b97e] transition-colors duration-300"
               >
-                Tenho 18 anos ou mais
+                Confirmo ter 18 anos ou mais
               </button>
               <button
                 onClick={handleDeny}
                 className="w-full sm:w-auto px-10 py-3.5 border border-[#2a2a2a] text-[#a89f95] text-sm tracking-[0.15em] uppercase rounded hover:border-[#a89f95] hover:text-[#f5f0eb] transition-colors duration-300"
               >
-                Sou menor de 18
+                Sair
               </button>
             </div>
 
             {/* Legal note */}
             <p className="text-[#a89f95]/40 text-xs mt-8">
-              Ao entrar você concorda com nossos Termos de Uso e Política de Privacidade.
+              Ao prosseguir, você concorda com nossos Termos de Uso e Política de Privacidade.
             </p>
           </motion.div>
         </motion.div>
